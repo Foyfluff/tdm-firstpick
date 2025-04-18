@@ -30,7 +30,7 @@ body {
   /* Voting images (no hover zoom) */
   #card-left-img,
   #card-right-img {
-    width: 200px;
+    width: 400px;
     height: auto;
     border-radius: 12px;
     box-sizing: border-box;
