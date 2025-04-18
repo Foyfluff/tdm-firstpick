@@ -1,0 +1,128 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1e1e2f;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #ffdf80;
+  }
+  
+  #card-container {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+  
+  #card-container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Voting images (no hover zoom) */
+  #card-left-img,
+  #card-right-img {
+    width: 200px;
+    height: auto;
+    border-radius: 12px;
+    box-sizing: border-box;
+    transition: border 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* No zoom on hover for voting images */
+  #card-left-img:hover,
+  #card-right-img:hover {
+    transform: none;
+    z-index: auto;
+  }
+  
+/* Flash effect using outline (no reflow) */
+.vote-flash {
+    outline: 4px solid #00ff88; /* Using outline instead of border */
+    outline-offset: -4px; /* Optional: Adjust outline position */
+    animation: flash-border 0.6s ease forwards;
+  }
+  
+  @keyframes flash-border {
+    0% { outline-color: #00ff88; }
+    100% { outline-color: transparent; }
+  }
+  
+  button {
+    margin-top: 1rem;
+    padding: 0.75rem 1.25rem;
+    font-size: 1.1rem;
+    background-color: #ff8050;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #ff9966;
+  }
+  
+  a {
+    color: #89cff0;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Leaderboard table styles */
+  table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #2d2d44;
+    border-radius: 10px;
+    overflow: visible;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  thead {
+    background-color: #444466;
+    color: #ffdf80;
+  }
+  
+  th, td {
+    padding: 1rem;
+    border-bottom: 1px solid #444;
+    
+    
+  }
+  
+  tr:hover {
+    background-color: #3a3a50;
+  }
+  
+  /* Thumbnail zoom effect on leaderboard */
+  .card-image {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+  }
+  
+  .card-image:hover {
+    transform: scale(6);
+    position: relative;
+    z-index: 999;
+  }
+  
